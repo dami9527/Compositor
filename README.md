@@ -9,6 +9,7 @@ Because it’s open source, you can download the Xcode project and add, remove, 
 ## Installation
 
 ### Download
+
 Get Compositor from [robbietilton.com/compositor](https://robbietilton.com/compositor), or download the latest release directly from [GitHub Releases](https://github.com/robbietilton/Compositor/releases/latest).
 
 ### Homebrew
@@ -20,6 +21,7 @@ brew install --cask robbietilton-compositor
 ## Features
 
 ### Layers
+
 - Layers and folders, with opacity and Photoshop's full set of blend modes in its order — a folder's opacity dims everything inside it
 - Layer masks: paint, fill, invert, blur and feather them anywhere on the canvas, past the layer's own pixels; link or unlink them to transform a mask on its own
 - Clipping masks and folder masks
@@ -30,6 +32,7 @@ brew install --cask robbietilton-compositor
 - Copy and paste whole layers and folders (⌘C/⌘V with no selection), within a project or between projects, or drag them between projects
 
 ### Transform
+
 - Non-destructive move, scale, rotate and flip — images keep their full resolution however small you make them
 - Free distort (⌘-drag a handle), with Shift to lock to an axis
 - Transform several layers, or a whole folder, together
@@ -38,6 +41,7 @@ brew install --cask robbietilton-compositor
 - Flip Layer and Flip Canvas, horizontal and vertical
 
 ### Selections
+
 - Rectangle and Ellipse Marquee, Freehand and Polygonal Lasso, and the Magic tool — Wand selects by color, Object traces whatever you click (Tab switches)
 - Select Subject, and Expand, Contract and Feather on any selection
 - Add to and subtract from selections, move the outline, or move and duplicate the pixels inside
@@ -45,6 +49,7 @@ brew install --cask robbietilton-compositor
 - Content-Aware Fill, which can also extend an image past its edges
 
 ### Painting and retouching
+
 - Brush with size, hardness, opacity and smoothing, in Paint or Erase mode (B and E), and Shift for straight lines
 - Spot Healing Brush (content-aware)
 - Clone Stamp, aligned or not, sampling one layer or all of them
@@ -54,6 +59,7 @@ brew install --cask robbietilton-compositor
 - Eyedropper and a full color picker
 
 ### Adjustments and filters
+
 - Camera Raw filter: light, color, curves, color mixer, color grading, detail, optics and geometry, in a panel beside the canvas
 - Levels (with Auto), Curves, Hue/Saturation, Exposure, Gradient Map, Grain, Black & White, Color Balance and Invert
 - Gaussian Blur and Motion Blur that spread past a layer's edges
@@ -61,6 +67,7 @@ brew install --cask robbietilton-compositor
 - Live previews, limited to the selection when there is one
 
 ### Canvas and files
+
 - Multiple projects in tabs
 - Rulers (⌘R), guides dragged from them, a layout grid with adjustable spacing and subdivisions, and Snap To for guides, grid, layers and document bounds
 - Crop with snapping, ratios including 3:4 and 9:16, and Option for symmetric cropping; with a selection, the crop starts at it
@@ -72,19 +79,23 @@ brew install --cask robbietilton-compositor
 - Keep working while a project saves
 - Photoshop-style keyboard shortcuts throughout, remappable in Edit > Keyboard Shortcuts
 - Drag a number's label to scrub its value, as in Photoshop
-- Automatic updates, signed and notarized
 
 ### Works with AI agents
+
 - AI agents and scripts can build and edit projects directly: a `.comp` is a folder of PNG layers and a manifest, and an open project updates live as it's written. See [Writing Compositor projects](docs/writing-comp-files.md)
 
 ## Requirements
 
-- macOS 26.0 or later on a Mac with Apple silicon
+- macOS 15.7.7 or later on a Mac with Apple silicon
 - Xcode 26 or later (to build from source)
 
 ## Building
 
 Open `Compositor.xcodeproj` and run the **Compositor** scheme.
+
+## Local package
+
+`scripts/package-local.sh` builds `dist/Compositor-<version>.dmg` for macOS 15.7 and later. It is ad-hoc signed, so it does not need a Developer ID certificate. After merging upstream, run that script again.
 
 ## Releasing
 

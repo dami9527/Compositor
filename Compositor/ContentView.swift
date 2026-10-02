@@ -164,7 +164,9 @@ struct ContentView: View {
                     .disabled(session.isImporting || session.showsBusy || session.levels != nil)
                     .modifier(NewProjectDropTarget(workspace: applicationDelegate?.workspace))
             }
-            ToolbarSpacer(.fixed, placement: .navigation)
+            if #available(macOS 26, *) {
+                ToolbarSpacer(.fixed, placement: .navigation)
+            }
             if let workspace = applicationDelegate?.workspace {
                 ToolbarItem(placement: .navigation) {
                     ProjectTabStrip(workspace: workspace)
@@ -173,11 +175,14 @@ struct ContentView: View {
                         // strip scrolls instead.
                         .frame(width: max(200, windowWidth - 352), height: 34, alignment: .center)
                 }
-                .sharedBackgroundVisibility(.hidden)
+                .hidingSharedToolbarBackground()
             }
             // Absorb all remaining navigation-toolbar width before the zoom controls.
             // Without this spacer, the growing tab strip pushes the primary actions left.
-            ToolbarSpacer(.flexible, placement: .navigation)
+            // ToolbarSpacer is macOS 26; on 15.7 the strip's own frame width holds the zoom controls.
+            if #available(macOS 26, *) {
+                ToolbarSpacer(.flexible, placement: .navigation)
+            }
             ToolbarItem(placement: .primaryAction) {
                 Button("Fit") { session.fit() }.help("Fit canvas in window (⌘0)")
                     .accessibilityIdentifier("fitCanvas").disabled(session.document == nil)
@@ -458,6 +463,19 @@ extension View {
                 active ? stepper.listen(step: step) : stepper.stopListening()
             }
             .onDisappear { stepper.stopListening() }
+    }
+}
+
+extension ToolbarContent {
+    /// macOS 26 draws one glass background behind adjacent toolbar items. The tab strip already has its
+    /// own background, so that grouping stays hidden. Earlier systems have no shared background.
+    @ToolbarContentBuilder
+    fileprivate func hidingSharedToolbarBackground() -> some ToolbarContent {
+        if #available(macOS 26, *) {
+            self.sharedBackgroundVisibility(.hidden)
+        } else {
+            self
+        }
     }
 }
 
