@@ -43,7 +43,15 @@ final class CompositorApplicationDelegate: NSObject, NSApplicationDelegate {
         // What's still open (a dialog, a gradient waiting for Apply) is settled by confirmQuit, which beeps if
         // something, a save still running say, has to finish first.
         guard !workspace.isManaging else { return .terminateCancel }
-        Task { sender.reply(toApplicationShouldTerminate: await workspace.confirmQuit()) }
+        Task {
+            let quit = await workspace.confirmQuit()
+            if !quit { AppLanguage.cancelPendingRelaunch() }
+            sender.reply(toApplicationShouldTerminate: quit)
+        }
         return .terminateLater
+    }
+
+    func applicationWillTerminate(_ notification: Notification) {
+        AppLanguage.relaunchIfNeeded()
     }
 }

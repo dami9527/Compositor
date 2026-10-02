@@ -15,13 +15,13 @@ struct ColorRangeSheet: View {
                         .background(edit?.effectiveMode == mode ? Color.accentColor.opacity(0.25) : .clear,
                                     in: RoundedRectangle(cornerRadius: 4))
                         .help(help(mode))
-                        .accessibilityLabel("\(mode.rawValue) color")
+                        .accessibilityLabel(String(format: "%@ color".localized, mode.rawValue.localized))
                 }
                 Spacer()
             }
             preview
-            Text(edit?.hasColors == true ? "Shift-click adds a color, Option-click takes one away."
-                                         : "Click the image to pick the color to select.")
+            Text((edit?.hasColors == true ? "Shift-click adds a color, Option-click takes one away."
+                                         : "Click the image to pick the color to select.").localized)
                 .font(.callout).foregroundStyle(.secondary)
             HStack(spacing: 10) {
                 Text("Fuzziness").fixedSize()
@@ -34,7 +34,7 @@ struct ColorRangeSheet: View {
             Toggle("Invert", isOn: Binding(get: { edit?.invert ?? false }, set: { edit?.invert = $0; session.updateColorRange() }))
                 .help("Select everything except those colors, such as all but a green screen")
             if let error = edit?.error {
-                Text(error).foregroundStyle(.orange).fixedSize(horizontal: false, vertical: true)
+                Text(error.localized).foregroundStyle(.orange).fixedSize(horizontal: false, vertical: true)
             }
             Divider()
             HStack {
@@ -72,9 +72,9 @@ struct ColorRangeSheet: View {
 
     private func help(_ mode: HueSampleMode) -> String {
         switch mode {
-        case .replace: "Click the image to select that color"
-        case .add: "Click the image to add that color to the selection"
-        case .remove: "Click the image to take that color out of the selection"
+        case .replace: "Click the image to select that color".localized
+        case .add: "Click the image to add that color to the selection".localized
+        case .remove: "Click the image to take that color out of the selection".localized
         }
     }
 

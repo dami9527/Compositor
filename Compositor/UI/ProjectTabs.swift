@@ -358,13 +358,13 @@ private struct ProjectTabButton: View {
                     .frame(width: 16, height: 28)
                     .padding(.trailing, 5)
                     .contentShape(Rectangle())
-            }.buttonStyle(.plain).help("Close \(tab.title)").disabled(!workspace.canSwitch)
-                .accessibilityLabel("Close \(tab.title)")
+            }.buttonStyle(.plain).help(Text(String(format: "Close %@".localized, tab.title))).disabled(!workspace.canSwitch)
+                .accessibilityLabel(String(format: "Close %@".localized, tab.title))
         }
         .frame(height: 28)
         .background(targeted ? Color.accentColor.opacity(0.3) : Color.white.opacity(active ? 0.12 : 0.035), in: Capsule())
         .overlay(Capsule().strokeBorder(targeted ? Color.accentColor : Color.white.opacity(active ? 0.22 : 0.08), lineWidth: targeted ? 2 : 1))
-        .help(targeted ? "Add to \(tab.title)" : tab.title)
+        .help(Text(targeted ? String(format: "Add to %@".localized, tab.title) : tab.title))
         .onDrop(of: [UTType.fileURL.identifier, UTType.image.identifier, ProjectWorkspace.layerType], delegate:
             ProjectTabDropDelegate(workspace: workspace, destination: tab.id, targeted: $targeted))
     }
@@ -376,7 +376,7 @@ struct NewProjectDropTarget: ViewModifier {
     func body(content: Content) -> some View {
         content
             .overlay(RoundedRectangle(cornerRadius: 6).strokeBorder(targeted ? Color.accentColor : .clear, lineWidth: 2))
-            .help(targeted ? "Open in a new project tab" : "New canvas (⌘N) · Drop images here for new tabs")
+            .help(Text(targeted ? "Open in a new project tab".localized : "New canvas (⌘N) · Drop images here for new tabs".localized))
             .onDrop(of: [UTType.fileURL.identifier, UTType.image.identifier, ProjectWorkspace.layerType], delegate:
                 ProjectTabDropDelegate(workspace: workspace, destination: nil, targeted: $targeted))
     }
