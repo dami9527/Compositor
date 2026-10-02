@@ -78,6 +78,7 @@ struct ContentView: View {
 
     @ViewBuilder private var editorStack: some View {
         VStack(spacing: 0) {
+            updateBanner
             toolHeaders
             HStack(spacing: 0) {
                 toolRail
@@ -115,6 +116,25 @@ struct ContentView: View {
             // Keeps its own height however short the window gets; the tools scroll instead.
             statusBar.fixedSize(horizontal: false, vertical: true)
                 .modifier(WidthReader(width: $windowWidth))
+        }
+    }
+
+    /// A newer release on GitHub. Download opens the release page; nothing is installed from here.
+    @ViewBuilder private var updateBanner: some View {
+        if let notice = applicationDelegate?.releaseNotice, let release = notice.banner {
+            HStack(spacing: 12) {
+                Image(systemName: "arrow.down.circle")
+                Text(String(format: "Version %@ is available".localized, release.version))
+                Spacer()
+                Button("Download") { notice.open() }
+                    .help("Opens the GitHub release so you can download the disk image and install it yourself.")
+                Button { notice.dismiss() } label: { Image(systemName: "xmark") }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("Dismiss".localized)
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 6)
+            .background(Color.accentColor.opacity(0.22))
         }
     }
 

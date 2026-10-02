@@ -2,6 +2,7 @@ import AppKit
 
 final class CompositorApplicationDelegate: NSObject, NSApplicationDelegate {
     let workspace = ProjectWorkspace()
+    let releaseNotice = ReleaseNotice()
     var session: EditorSession { workspace.current.session }
     var projects: ProjectController { workspace.current.controller }
     var showEditor: (() -> Void)?
@@ -25,6 +26,14 @@ final class CompositorApplicationDelegate: NSObject, NSApplicationDelegate {
                                            targetDescriptor: .currentProcess(), returnID: AEReturnID(kAutoGenerateReturnID),
                                            transactionID: AETransactionID(kAnyTransactionID))
         _ = try? event.sendEvent(options: .noReply, timeout: 1)
+    }
+
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        releaseNotice.checkIfNeeded()
+    }
+
+    func applicationDidBecomeActive(_ notification: Notification) {
+        releaseNotice.checkIfNeeded()
     }
 
     func applicationWillFinishLaunching(_ notification: Notification) {

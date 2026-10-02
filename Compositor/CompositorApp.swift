@@ -97,6 +97,11 @@ struct CompositorApp: App {
                             languageChoice(.english, "English")
                             languageChoice(.simplifiedChinese, "简体中文")
                         }
+                        if let release = applicationDelegate.releaseNotice.available {
+                            Button(String(format: "Version %@ is available".localized, release.version)) {
+                                applicationDelegate.releaseNotice.open()
+                            }
+                        }
                     }
                     CommandGroup(after: .toolbar) {
                         // With a dialog's preview open (Export JPEG), these zoom that preview rather than the canvas.
