@@ -8,12 +8,11 @@ struct LayerMaskMenu: View {
     var body: some View {
         Button {
             session.addMask(revealing: NSApp.currentEvent?.modifierFlags.contains(.option) != true)
-        } label: { Image(systemName: "rectangle.inset.filled").footerHitArea() }
-            .buttonStyle(.borderless)
-            .help(Text((session.selection == nil ? "Add layer mask (Option-click for a black mask)"
-                  : "Add layer mask revealing the selection (Option-click to hide it)").localized))
-            .accessibilityLabel("Add layer mask".localized)
-            .disabled(!session.canEditMask || session.activeLayer?.mask != nil)
+        } label: { FooterIcon(systemName: "rectangle.inset.filled") }
+        .help(Text((session.selection == nil ? "Add layer mask (Option-click for a black mask)"
+              : "Add layer mask revealing the selection (Option-click to hide it)").localized))
+        .accessibilityLabel("Add layer mask".localized)
+        .disabled(!session.canEditMask || session.activeLayer?.mask != nil)
     }
 }
 
