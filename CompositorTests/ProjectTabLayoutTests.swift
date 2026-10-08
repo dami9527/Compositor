@@ -43,9 +43,10 @@ struct ProjectTabLayoutTests {
     }
 
     @Test func overflowLabelIsSingularForOneTab() {
-        #expect(projectTabOverflowLabel(for: 1) == "1 more tab")
-        #expect(projectTabOverflowLabel(for: 2) == "2 more tabs")
-        #expect(projectTabOverflowLabel(for: 11) == "11 more tabs")
+        // The label is built from the catalog, so the expectations are too.
+        #expect(projectTabOverflowLabel(for: 1) == "1 more tab".localized)
+        #expect(projectTabOverflowLabel(for: 2) == String(format: "%@ more tabs".localized, "2"))
+        #expect(projectTabOverflowLabel(for: 11) == String(format: "%@ more tabs".localized, "11"))
     }
 
     @Test func unmeasuredWidthShowsEverythingRatherThanGuessing() {

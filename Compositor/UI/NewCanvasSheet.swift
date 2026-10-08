@@ -73,8 +73,10 @@ struct NewCanvasSheet: View {
     private var pixelHeight: Int? { unit.pixels(height, resolution: resolution) }
     private var valid: Bool { pixelWidth != nil && pixelHeight != nil }
     private var resolutionHelp: String {
-        let size = unit != .pixels ? pixelWidth.flatMap { w in pixelHeight.map { h in " · \(Int(resolution)) DPI: \(w) × \(h) pixels" } } : nil
-        return "Resolution: 72 for screens, 300 for print. Click to switch." + (size ?? "")
+        let size = unit != .pixels ? pixelWidth.flatMap { w in pixelHeight.map { h in
+            String(format: " · %lld DPI: %lld × %lld pixels".localized, Int(resolution), w, h)
+        } } : nil
+        return "Resolution: 72 for screens, 300 for print. Click to switch.".localized + (size ?? "")
     }
     /// Shows the sizes in another unit, the same canvas written differently.
     private func switchUnit(to new: NewCanvasUnit) {
@@ -128,27 +130,27 @@ struct NewCanvasSheet: View {
             }
             // The settings are pills, each changed the same way: click to step to the next choice.
             HStack(spacing: 4) {
-                CyclePill(background.title, help: "Start see-through, or with a white or black Background layer. Click to switch.") {
+                CyclePill(background.title.localized, help: "Start see-through, or with a white or black Background layer. Click to switch.".localized) {
                     background = background.next
                 }
                 .accessibilityIdentifier("canvasBackground")
                 Text("·")
-                CyclePill(unit.name, help: "Units: pixels, inches, centimeters or millimeters. Click to switch.") {
+                CyclePill(unit.name.localized, help: "Units: pixels, inches, centimeters or millimeters. Click to switch.".localized) {
                     switchUnit(to: unit.next)
                 }
                 .accessibilityIdentifier("canvasUnit")
                 Text("·")
                 // In print units the pixels follow the DPI; in pixels, the DPI is just stored with the file. The pixel
                 // size it makes is in the pill's hover text, out of the way until it's wanted.
-                CyclePill("\(Int(resolution)) DPI", help: resolutionHelp) {
+                CyclePill(String(format: "%lld DPI".localized, Int(resolution)), help: resolutionHelp) {
                     resolution = resolution == 300 ? 72 : 300
                 }
                 .accessibilityIdentifier("canvasResolution")
             }
             .font(.callout).foregroundStyle(.secondary)
             if !valid {
-                Text(unit == .pixels ? "Enter whole numbers from 1 to \(DocumentLimits.maxSide.formatted()) pixels."
-                                     : "Enter a size up to \(DocumentLimits.maxSide.formatted()) pixels at this DPI.")
+                Text(unit == .pixels ? String(format: "Enter whole numbers from 1 to %@ pixels.".localized, DocumentLimits.maxSide.formatted())
+                                     : String(format: "Enter a size up to %@ pixels at this DPI.".localized, DocumentLimits.maxSide.formatted()))
                     .font(.callout).foregroundStyle(.orange)
             }
             HStack(spacing: 10) {

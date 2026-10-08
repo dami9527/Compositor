@@ -56,16 +56,22 @@ struct CommandPaletteTests {
     @Test func realMenuBarRunsItsCommands() async throws {
         let bar = try #require(NSApp.mainMenu)
         func entries() -> [CommandPaletteEntry] { CommandPaletteMenu.entries(in: bar, skipping: CommandPaletteController.skipped) }
+        let gridItem = "Pixel Grid (800% and above)".localized
         func gridState() -> NSControl.StateValue? {
-            bar.items.first { $0.title == "View" }?.submenu?.items.first { $0.title == "Pixel Grid (800% and above)" }?.state
+            bar.items.compactMap(\.submenu).first { $0.items.contains { $0.title == gridItem } }?
+                .items.first { $0.title == gridItem }?.state
         }
         let listed = entries()
         let titles = Set(listed.map(\.title))
-        #expect(titles.contains("Filter › Gaussian Blur…") && !titles.contains("View › Search Commands…"))
+        // The Filter menu is the app's own, so its path is built from the catalog; the palette's own item is left out
+        // under whichever name this language gives it.
+        let gaussian = "Filter".localized + " › " + "Gaussian Blur".localized + "…"
+        #expect(titles.contains(gaussian) && !titles.contains { $0.hasSuffix("› " + "Search Commands…".localized) })
         // The test host has no document open, so Zoom In is disabled: listed, greyed.
-        let zoom = try #require(listed.first { $0.title == "View › Zoom In" })
+        // A command is found by its own title: SwiftUI names the menu holding it in whatever language the app runs in.
+        let zoom = try #require(listed.first { $0.title.hasSuffix("› " + "Zoom In".localized) })
         #expect(!zoom.isEnabled)
-        let grid = try #require(listed.first { $0.title == "View › Pixel Grid (800% and above)" })
+        let grid = try #require(listed.first { $0.title.hasSuffix("› " + gridItem) })
         let before = try #require(gridState())
         grid.perform()
         try await Task.sleep(for: .milliseconds(300))

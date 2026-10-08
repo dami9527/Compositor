@@ -71,13 +71,14 @@ enum AppLanguage: String, CaseIterable, Identifiable {
 
 extension String {
     /// The catalog entry for this English source text, or the text itself when that entry is missing.
-    var localized: String {
+    /// Nonisolated: names are built while pixels are worked on, off the main actor, as well as in views.
+    nonisolated var localized: String {
         Bundle.main.localizedString(forKey: self, value: self, table: nil)
     }
 
     /// Undo names stay English in the history. Exact catalog keys translate, and a few built names
     /// carry a filter or effect title in the middle.
-    var localizedAction: String {
+    nonisolated var localizedAction: String {
         let direct = localized
         if direct != self { return direct }
         let wrapped = [
