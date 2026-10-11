@@ -12060,6 +12060,26 @@
           }
         }
       }
+    },
+    "Choose a JPEG, PNG, HEIC, TIFF, WebP, or Photoshop (PSD) file.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请选择 JPEG、PNG、HEIC、TIFF、WebP 或 Photoshop (PSD) 文件。"
+          }
+        }
+      }
+    },
+    "Some dropped items couldn’t be read. Drag JPEG, PNG, HEIC, TIFF, WebP, or Photoshop (PSD) files from Finder.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有些拖入的项目无法读取。请从访达拖入 JPEG、PNG、HEIC、TIFF、WebP 或 Photoshop (PSD) 文件。"
+          }
+        }
+      }
     }
   },
   "version": "1.0"
