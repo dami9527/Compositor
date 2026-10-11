@@ -83,6 +83,7 @@ brew install --cask robbietilton-compositor
 - Keep working while a project saves
 - Photoshop-style keyboard shortcuts throughout, remappable in Edit > Keyboard Shortcuts
 - Drag a number's label to scrub its value, as in Photoshop
+- Newer releases are only pointed at, never installed: a banner and the Compositor menu say a version is available, list what's new in it, and open the GitHub release to download the disk image yourself
 
 ### Works with AI agents
 

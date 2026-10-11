@@ -134,12 +134,15 @@ struct ContentView: View {
         }
     }
 
-    /// A newer release on GitHub. Download opens the release page; nothing is installed from here.
+    /// A newer release on GitHub. View lists what's in it; Download opens the release page; nothing is installed
+    /// from here.
     @ViewBuilder private var updateBanner: some View {
         if let notice = applicationDelegate?.releaseNotice, let release = notice.banner {
             HStack(spacing: 12) {
                 Image(systemName: "arrow.down.circle")
                 Text(String(format: "Version %@ is available".localized, release.version))
+                Button("View") { notice.showDetails() }
+                    .help("Lists what’s new in this version before you download it.")
                 Spacer()
                 Button("Download") { notice.open() }
                     .help("Opens the GitHub release so you can download the disk image and install it yourself.")

@@ -105,7 +105,7 @@ struct CompositorApp: App {
                         }
                         if let release = applicationDelegate.releaseNotice.available {
                             Button(String(format: "Version %@ is available".localized, release.version)) {
-                                applicationDelegate.releaseNotice.open()
+                                applicationDelegate.releaseNotice.showDetails()
                             }
                         }
                     }
