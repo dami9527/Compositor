@@ -278,7 +278,7 @@ struct FilterSheet: View {
         control("Black Level", \.scanlines.blackLevel, range: 0...100, unit: "%", decimals: 0, logarithmic: false)
             .help("How bright the lines are where the picture is black, so they show even over black")
         Picker("Colors", selection: Binding(get: { lines.colors }, set: { new in update { $0.scanlines.colors = new } })) {
-            ForEach(DitherColors.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+            ForEach(DitherColors.allCases, id: \.self) { Text($0.rawValue.localized).tag($0) }
         }
         .fixedSize()
         if lines.colors == .twoColors {
@@ -339,7 +339,7 @@ struct FilterSheet: View {
                             range: range)
             if let track {
                 CameraRawSlider(value: settings[keyPath: key], range: range, track: track,
-                                help: "\(title). Double-click to reset.",
+                                help: String(format: "%@. Double-click to reset.".localized, title.localized),
                                 onChange: { value in update { $0[keyPath: key] = (value * step).rounded() / step } },
                                 onReset: reset)
             } else {
@@ -393,7 +393,7 @@ struct GradientMapControls: View {
                     .contentShape(shape)
             }
             .buttonStyle(.plain)
-            .help(Text(("Choose the " + title.lowercased() + " color").localized))
+            .help(Text(String(format: "Choose the %@ color".localized, title.localized.lowercased())))
             .accessibilityLabel(String(format: "%@ color".localized, title.localized))
             Text(title.localized)
         }

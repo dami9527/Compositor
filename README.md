@@ -95,7 +95,7 @@ brew install --cask robbietilton-compositor
 
 ## Translations
 
-Compositor is English only for now, and translation pull requests aren't being accepted. It's maintained by one person, every new string would need translating from then on, and translations in languages I don't read can't be reviewed. I'll revisit this once the app settles; until then, please don't open localization PRs.
+Upstream is English only for now and asks for no localization pull requests: it's maintained by one person, and translations in languages they don't read can't be reviewed. This fork carries a Simplified Chinese interface of its own, switched in the app under **Compositor › Language** (it relaunches), with the wording in `Compositor/Localizable.xcstrings` — upstream's new strings are translated here as they are merged.
 
 ## Building
 
