@@ -12061,26 +12061,6 @@
         }
       }
     },
-    "Choose a JPEG, PNG, HEIC, TIFF, WebP, or Photoshop (PSD) file.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "请选择 JPEG、PNG、HEIC、TIFF、WebP 或 Photoshop (PSD) 文件。"
-          }
-        }
-      }
-    },
-    "Some dropped items couldn’t be read. Drag JPEG, PNG, HEIC, TIFF, WebP, or Photoshop (PSD) files from Finder.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "有些拖入的项目无法读取。请从访达拖入 JPEG、PNG、HEIC、TIFF、WebP 或 Photoshop (PSD) 文件。"
-          }
-        }
-      }
-    },
     "View": {
       "localizations": {
         "zh-Hans": {
@@ -12127,6 +12107,186 @@
           "stringUnit": {
             "state": "translated",
             "value": "在下载前列出这个版本的新变化。"
+          }
+        }
+      }
+    },
+    "Choose a JPEG, PNG, HEIC, HEIF, TIFF, WebP, or Photoshop (PSD) file.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请选择 JPEG、PNG、HEIC、HEIF、TIFF、WebP 或 Photoshop (PSD) 文件。"
+          }
+        }
+      }
+    },
+    "Some dropped items couldn’t be read. Drag JPEG, PNG, HEIC, HEIF, TIFF, WebP, or Photoshop (PSD) files from Finder.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有些拖入的项目无法读取。请从访达拖入 JPEG、PNG、HEIC、HEIF、TIFF、WebP 或 Photoshop (PSD) 文件。"
+          }
+        }
+      }
+    },
+    "“%@” has no images to import.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@”中没有可导入的图像。"
+          }
+        }
+      }
+    },
+    "Not available for this camera": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此相机不支持"
+          }
+        }
+      }
+    },
+    "Smooths grain, at the cost of fine detail": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "平滑颗粒，代价是细节损失"
+          }
+        }
+      }
+    },
+    "This file has no lens profile": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此文件没有镜头配置文件"
+          }
+        }
+      }
+    },
+    "Removes the lens's distortion and vignetting": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "去除镜头的畸变与晕影"
+          }
+        }
+      }
+    },
+    "Highlight Recovery": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高光恢复"
+          }
+        }
+      }
+    },
+    "Brings back detail in bright areas the camera partly clipped": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找回相机部分裁切的亮部细节"
+          }
+        }
+      }
+    },
+    "Preserve Transparency": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保留透明度"
+          }
+        }
+      }
+    },
+    "Blur only the colors, keeping the layer's outline and transparency as they are": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只模糊颜色，图层的轮廓和透明度保持不变"
+          }
+        }
+      }
+    },
+    "Vertical": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "垂直"
+          }
+        }
+      }
+    },
+    "Horizontal": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "水平"
+          }
+        }
+      }
+    },
+    "Aspect": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "长宽比"
+          }
+        }
+      }
+    },
+    "Scale": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "缩放"
+          }
+        }
+      }
+    },
+    "Distortion": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "畸变"
+          }
+        }
+      }
+    },
+    "Vignetting": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "晕影"
+          }
+        }
+      }
+    },
+    "Masking": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "蒙版"
           }
         }
       }

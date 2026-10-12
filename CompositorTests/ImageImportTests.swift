@@ -212,7 +212,9 @@ struct ImageImportTests {
         let session = EditorSession()
         await session.importImages([folder])
         #expect(session.document == nil)
-        #expect(session.importError?.contains("has no images to import") == true)
+        // The message comes from the catalog, so the expectation does too.
+        let expected = String(format: "“%@” has no images to import.".localized, folder.lastPathComponent)
+        #expect(session.importError?.contains(expected) == true)
     }
 
     /// HEIF files from cameras (Canon, Sony and Fuji save .hif or .heif) are typed public.heif, not public.heic: the

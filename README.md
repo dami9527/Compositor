@@ -51,7 +51,7 @@ brew install --cask robbietilton-compositor
 ### Painting and retouching
 
 - Brush with size, hardness, opacity and smoothing, in Paint or Erase mode (B and E), and Shift for straight lines
-- Spot Healing Brush (content-aware)
+- Spot Healing Brush (content-aware) and Content-Aware Fill, both on a multi-scale PatchMatch engine: edges and texture carry on through what's removed
 - Clone Stamp, aligned or not, sampling one layer or all of them
 - Blur tool, on pixels or masks
 - Gradient tool and Shape tool (rectangles, rounded rectangles, ellipses and lines), which stay editable rather than being rasterized
@@ -60,9 +60,9 @@ brew install --cask robbietilton-compositor
 
 ### Adjustments and filters
 
-- Camera Raw filter: light, color, curves, color mixer, color grading, detail, optics and geometry, in a panel beside the canvas
+- Camera Raw filter: light, color, curves, color mixer, color grading, detail, optics and geometry, in a panel beside the canvas; Noise Reduction, Lens Correction and Highlight Recovery appear where the file's camera supports them
 - Levels (with Auto), Curves, Hue/Saturation, Exposure, Gradient Map, Grain, Black & White, Color Balance and Invert
-- Gaussian Blur and Motion Blur that spread past a layer's edges
+- Gaussian Blur, with Preserve Transparency to blur only the colors and keep the layer's outline, and Motion Blur; both spread past a layer's edges
 - Add Noise, Vignette, Bloom / Glow, Dither, Scanlines, Tonal Contrast, Lens Correction and Remove Background
 - Live previews, limited to the selection when there is one
 - Last Filter (⌃⌘F) runs the last filter again with the same settings
@@ -77,7 +77,7 @@ brew install --cask robbietilton-compositor
 - Canvas Size, Image Size and Trim
 - A Navigator minimap in the canvas's corner from 300% zoom: the whole document in small with a box around the view; click or drag to move there (View › Navigator)
 - Sharp high-quality downsampling when zoomed out, and a pixel grid when zoomed in
-- Import JPEG, PNG, HEIC, TIFF, WebP, SVG, camera RAW (with a develop step first) and Photoshop PSD and PSB (8-bit RGB; not CMYK). Photoshop folders, masks, blend modes, fill rectangles/ellipses, and simple horizontal text stay editable; other vectors and vertical text become pixels. A conversion report is shown before anything is applied.
+- Import JPEG, PNG, HEIC, HEIF, TIFF, WebP, SVG, camera RAW (with a develop step first) and Photoshop PSD and PSB (8-bit RGB; not CMYK), or drop a folder of images in to bring them in as layers. Photoshop folders, masks, blend modes, fill rectangles/ellipses, and simple horizontal text stay editable; other vectors and vertical text become pixels. A conversion report is shown before anything is applied.
 - Large documents: the memory budget scales with your Mac, and a Photoshop file too big to open has its layers cropped to the canvas instead
 - Export PNG (⇧⌘E), Export JPEG (⇧⌥⌘S), and Export As (⇧⌥⌘W) for PNG, JPEG or a one-page PDF at the print size, scaled if you like, with a live preview, JPEG quality and file size; Copy Merged
 - Keep working while a project saves
