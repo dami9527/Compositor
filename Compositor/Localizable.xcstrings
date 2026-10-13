@@ -31,6 +31,36 @@
         }
       }
     },
+    "16 bits per channel": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每通道 16 位"
+          }
+        }
+      }
+    },
+    "16-Bit": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "16 位"
+          }
+        }
+      }
+    },
+    "16-bit layer: keeps 16 bits a channel": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "16 位图层：每通道保留 16 位"
+          }
+        }
+      }
+    },
     "A subdivision every %@ pixels.": {
       "localizations": {
         "zh-Hans": {
@@ -661,6 +691,16 @@
         }
       }
     },
+    "Brighter than white kept · Transparency kept": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保留比白更亮的亮度 · 保留透明度"
+          }
+        }
+      }
+    },
     "Brush (B) · Eraser (E)": {
       "localizations": {
         "zh-Hans": {
@@ -817,6 +857,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "字符"
+          }
+        }
+      }
+    },
+    "Choose a CMYK ICC profile, such as the one your printer gave you": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择 CMYK ICC 配置文件，例如印刷厂提供的那个"
           }
         }
       }
@@ -1037,6 +1087,56 @@
           "stringUnit": {
             "state": "translated",
             "value": "关闭项目"
+          }
+        }
+      }
+    },
+    "CMYK": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CMYK"
+          }
+        }
+      }
+    },
+    "CMYK Gamut Warning": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CMYK 色域警告"
+          }
+        }
+      }
+    },
+    "CMYK Proof": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CMYK 打样"
+          }
+        }
+      }
+    },
+    "CMYK writes a printer's inks through the profile in View › CMYK › Profile": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CMYK 按“查看”›“CMYK”›“配置文件”所选的配置文件，用印刷油墨输出"
+          }
+        }
+      }
+    },
+    "CMYK – %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CMYK – %@"
           }
         }
       }
@@ -1317,6 +1417,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "对比度"
+          }
+        }
+      }
+    },
+    "Convert to 16-Bit": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转换为 16 位"
+          }
+        }
+      }
+    },
+    "Convert to 8-Bit": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转换为 8 位"
           }
         }
       }
@@ -1731,6 +1851,16 @@
         }
       }
     },
+    "Depth": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "位深度"
+          }
+        }
+      }
+    },
     "Deselect": {
       "localizations": {
         "zh-Hans": {
@@ -2097,6 +2227,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "椭圆"
+          }
+        }
+      }
+    },
+    "Embedded CMYK Profile": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内嵌的 CMYK 配置文件"
           }
         }
       }
@@ -2621,6 +2761,16 @@
         }
       }
     },
+    "Gamut Warning": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "色域警告"
+          }
+        }
+      }
+    },
     "Gaussian": {
       "localizations": {
         "zh-Hans": {
@@ -2637,6 +2787,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "高斯模糊"
+          }
+        }
+      }
+    },
+    "Generic CMYK Profile": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通用 CMYK 配置文件"
           }
         }
       }
@@ -2941,6 +3101,26 @@
         }
       }
     },
+    "HDR": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HDR"
+          }
+        }
+      }
+    },
+    "HDR layer: keeps light brighter than white, shown as white": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HDR 图层：保留比白更亮的亮度，显示为白色"
+          }
+        }
+      }
+    },
     "Height": {
       "localizations": {
         "zh-Hans": {
@@ -3007,6 +3187,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "用图层蒙版藏起背景、保留前景主体。像素还在，所以随时可以把背景画回来。"
+          }
+        }
+      }
+    },
+    "Hide the gamut warning": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "隐藏色域警告"
           }
         }
       }
@@ -3461,6 +3651,16 @@
         }
       }
     },
+    "Keep the 16-bit layers' full precision, in a file about twice the size": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保留 16 位图层的全部精度，文件体积约为两倍"
+          }
+        }
+      }
+    },
     "Keep the source moving with the brush between strokes; off starts every stroke at the source point": {
       "localizations": {
         "zh-Hans": {
@@ -3841,6 +4041,16 @@
         }
       }
     },
+    "Load Profile…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "载入配置文件…"
+          }
+        }
+      }
+    },
     "Loading histogram…": {
       "localizations": {
         "zh-Hans": {
@@ -4191,6 +4401,26 @@
         }
       }
     },
+    "More": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更多"
+          }
+        }
+      }
+    },
+    "More formats": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更多格式"
+          }
+        }
+      }
+    },
     "More ink (darker) or less before dithering": {
       "localizations": {
         "zh-Hans": {
@@ -4511,6 +4741,16 @@
         }
       }
     },
+    "No profile": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无配置文件"
+          }
+        }
+      }
+    },
     "Noise Reduction": {
       "localizations": {
         "zh-Hans": {
@@ -4647,6 +4887,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "好"
+          }
+        }
+      }
+    },
+    "Only 8-bit RGB and CMYK Photoshop files can be imported.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只能导入 8 位 RGB 和 CMYK Photoshop 文件。"
           }
         }
       }
@@ -4901,6 +5151,26 @@
         }
       }
     },
+    "Other formats: TIFF and PDF": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "其他格式：TIFF 和 PDF"
+          }
+        }
+      }
+    },
+    "Other formats: TIFF and PDF, and EXR to keep light brighter than white": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "其他格式：TIFF 和 PDF，以及可保留比白更亮亮度的 EXR"
+          }
+        }
+      }
+    },
     "Outer Glow": {
       "localizations": {
         "zh-Hans": {
@@ -5007,6 +5277,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "粘贴"
+          }
+        }
+      }
+    },
+    "Pasted Image": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粘贴的图像"
           }
         }
       }
@@ -5271,6 +5551,16 @@
         }
       }
     },
+    "Profile": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配置文件"
+          }
+        }
+      }
+    },
     "Project tabs": {
       "localizations": {
         "zh-Hans": {
@@ -5287,6 +5577,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "投影方式"
+          }
+        }
+      }
+    },
+    "Proof Colors": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打样"
           }
         }
       }
@@ -6191,6 +6491,16 @@
         }
       }
     },
+    "Show the document's own colors again": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新显示文档自身的颜色"
+          }
+        }
+      }
+    },
     "Show the image again (or Option-click the mask thumbnail)": {
       "localizations": {
         "zh-Hans": {
@@ -6411,6 +6721,26 @@
         }
       }
     },
+    "Stop marking colors the profile can't print": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不再标出配置文件无法印刷的颜色"
+          }
+        }
+      }
+    },
+    "Stop proofing": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止打样"
+          }
+        }
+      }
+    },
     "Stroke": {
       "localizations": {
         "zh-Hans": {
@@ -6597,6 +6927,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "纹理"
+          }
+        }
+      }
+    },
+    "That profile isn’t a CMYK output profile.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "该配置文件不是 CMYK 输出配置文件。"
           }
         }
       }
@@ -6957,6 +7297,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "拉直"
+          }
+        }
+      }
+    },
+    "Use a CMYK ICC profile, such as the one your printer gave you": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 CMYK ICC 配置文件，例如印刷厂提供的那个"
           }
         }
       }
@@ -9017,16 +9367,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "此 Photoshop 文件使用的格式版本 Compositor 无法读取。"
-          }
-        }
-      }
-    },
-    "Only 8-bit RGB Photoshop files can be imported.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "只能导入 8 位 RGB Photoshop 文件。"
           }
         }
       }

@@ -28,6 +28,8 @@ brew install --cask robbietilton-compositor
 - Adjustment layers: Hue/Saturation, Levels, Curves, Exposure, Gradient Map, Grain, Black & White, Color Balance, Invert, Gaussian Blur, Motion Blur and Noise
 - Layer effects: Stroke, Drop Shadow, Color Overlay, Inner Shadow, Outer Glow and Inner Glow, rendered on the GPU and editable at any time
 - Merge Down, Merge Layers and Merge Group (⌘E)
+- 16-bit layers, converted from the Layers panel's menu: adjustments, blur, Liquify, Smudge, gradients and fills all keep the extra precision, and a 16-bit PNG exports it
+- HDR layers, from OpenEXR and Radiance HDR: light brighter than white is kept through every edit, shown as white, and exported again as EXR. The panel tags a layer "16-Bit" or "HDR" beside its size
 - Duplicate, rename inline, reorder and nest by drag and drop; Option-drag to duplicate; a right-click menu in the Layers panel
 - Copy and paste whole layers and folders (⌘C/⌘V with no selection), within a project or between projects, or drag them between projects
 
@@ -76,10 +78,11 @@ brew install --cask robbietilton-compositor
 - Crop with snapping, ratios including 3:4 and 9:16, and Option for symmetric cropping; with a selection, the crop starts at it
 - Canvas Size, Image Size and Trim
 - A Navigator minimap in the canvas's corner from 300% zoom: the whole document in small with a box around the view; click or drag to move there (View › Navigator)
+- CMYK proofing (View › CMYK): choose or load an ICC profile, see the colors a printer would produce, and mark the ones the profile can't print
 - Sharp high-quality downsampling when zoomed out, and a pixel grid when zoomed in
-- Import JPEG, PNG, HEIC, HEIF, TIFF, WebP, SVG, camera RAW (with a develop step first) and Photoshop PSD and PSB (8-bit RGB; not CMYK), or drop a folder of images in to bring them in as layers. Photoshop folders, masks, blend modes, fill rectangles/ellipses, and simple horizontal text stay editable; other vectors and vertical text become pixels. A conversion report is shown before anything is applied.
+- Import JPEG, PNG, HEIC, HEIF, TIFF, WebP, SVG, OpenEXR and Radiance HDR, camera RAW (with a develop step first) and Photoshop PSD and PSB (8-bit RGB and CMYK), or drop a folder of images in to bring them in as layers. 16-bit images keep their precision as 16-bit layers, and EXR and HDR come in as HDR layers keeping light brighter than white. Photoshop folders, masks, blend modes, fill rectangles/ellipses, and simple horizontal text stay editable; other vectors and vertical text become pixels. A conversion report is shown before anything is applied.
 - Large documents: the memory budget scales with your Mac, and a Photoshop file too big to open has its layers cropped to the canvas instead
-- Export PNG (⇧⌘E), Export JPEG (⇧⌥⌘S), and Export As (⇧⌥⌘W) for PNG, JPEG or a one-page PDF at the print size, scaled if you like, with a live preview, JPEG quality and file size; Copy Merged
+- Export PNG (⇧⌘E), Export JPEG (⇧⌥⌘S), and Export As (⇧⌥⌘W) for PNG, JPEG, TIFF, a one-page PDF at the print size or EXR with an HDR layer, scaled if you like, with a live preview, JPEG quality and file size; a 16-bit PNG keeps a 16-bit layer's precision, and CMYK writes a printer's inks through an ICC profile; Copy Merged
 - Keep working while a project saves
 - Photoshop-style keyboard shortcuts throughout, remappable in Edit > Keyboard Shortcuts
 - Drag a number's label to scrub its value, as in Photoshop
