@@ -981,6 +981,16 @@
         }
       }
     },
+    "Click and drag two points on canvas": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在画布上点击并拖动两个点"
+          }
+        }
+      }
+    },
     "Click the canvas to sample": {
       "localizations": {
         "zh-Hans": {
@@ -2731,6 +2741,16 @@
         }
       }
     },
+    "From": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "起点"
+          }
+        }
+      }
+    },
     "Full justification was imported as left alignment.": {
       "localizations": {
         "zh-Hans": {
@@ -3957,6 +3977,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "线性"
+          }
+        }
+      }
+    },
+    "Linear blurs along the line; Radial keeps the start sharp and blurs outwards": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "线性沿这条线模糊；径向让起点保持清晰，向外逐渐模糊"
           }
         }
       }
@@ -5561,6 +5591,16 @@
         }
       }
     },
+    "Progressive Blur": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "渐进模糊"
+          }
+        }
+      }
+    },
     "Project tabs": {
       "localizations": {
         "zh-Hans": {
@@ -6831,6 +6871,16 @@
         }
       }
     },
+    "Swap From and To: blur the start and sharpen toward the end": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "交换起点与终点：起点模糊，越靠近终点越清晰"
+          }
+        }
+      }
+    },
     "Targeted Adjustment": {
       "localizations": {
         "zh-Hans": {
@@ -6941,6 +6991,26 @@
         }
       }
     },
+    "The blur where the line ends, and past it": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "线末端及其之外的模糊量"
+          }
+        }
+      }
+    },
+    "The blur where the line starts": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "线起点处的模糊量"
+          }
+        }
+      }
+    },
     "The brush trails the pointer on a string this long, so a shaky hand still draws a smooth line": {
       "localizations": {
         "zh-Hans": {
@@ -7037,6 +7107,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "色调"
+          }
+        }
+      }
+    },
+    "To": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "终点"
           }
         }
       }

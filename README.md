@@ -28,7 +28,7 @@ brew install --cask robbietilton-compositor
 - Adjustment layers: Hue/Saturation, Levels, Curves, Exposure, Gradient Map, Grain, Black & White, Color Balance, Invert, Gaussian Blur, Motion Blur and Noise
 - Layer effects: Stroke, Drop Shadow, Color Overlay, Inner Shadow, Outer Glow and Inner Glow, rendered on the GPU and editable at any time
 - Merge Down, Merge Layers and Merge Group (⌘E)
-- 16-bit layers, converted from the Layers panel's menu: adjustments, blur, Liquify, Smudge, gradients and fills all keep the extra precision, and a 16-bit PNG exports it
+- 16-bit layers, converted from the Layers panel's menu: adjustments, blur, Liquify, Smudge, gradients and fills all keep the extra precision, a 16-bit PNG exports it, and the canvas draws them at 16 bits so an adjustment layer over one previews as it exports
 - HDR layers, from OpenEXR and Radiance HDR: light brighter than white is kept through every edit, shown as white, and exported again as EXR. The panel tags a layer "16-Bit" or "HDR" beside its size
 - Duplicate, rename inline, reorder and nest by drag and drop; Option-drag to duplicate; a right-click menu in the Layers panel
 - Copy and paste whole layers and folders (⌘C/⌘V with no selection), within a project or between projects, or drag them between projects
@@ -65,6 +65,7 @@ brew install --cask robbietilton-compositor
 - Camera Raw filter: light, color, curves, color mixer, color grading, detail, optics and geometry, in a panel beside the canvas; Noise Reduction, Lens Correction and Highlight Recovery appear where the file's camera supports them
 - Levels (with Auto), Curves, Hue/Saturation, Exposure, Gradient Map, Grain, Black & White, Color Balance and Invert
 - Gaussian Blur, with Preserve Transparency to blur only the colors and keep the layer's outline, and Motion Blur; both spread past a layer's edges
+- Progressive Blur: drag a line on the canvas and the blur follows it, from the start to the end and past it, or radial outwards from the start; Invert swaps the two ends
 - Add Noise, Vignette, Bloom / Glow, Dither, Scanlines, Tonal Contrast, Lens Correction and Remove Background
 - Live previews, limited to the selection when there is one
 - Last Filter (⌃⌘F) runs the last filter again with the same settings
