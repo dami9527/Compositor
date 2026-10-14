@@ -62,7 +62,7 @@ brew install --cask robbietilton-compositor
 
 ### Adjustments and filters
 
-- Camera Raw filter: light, color, curves, color mixer, color grading, detail, optics and geometry, in a panel beside the canvas; Noise Reduction, Lens Correction and Highlight Recovery appear where the file's camera supports them
+- Camera Raw filter: light, color, curves, color mixer, color grading, detail, optics and geometry, in a panel beside the canvas; Noise Reduction, Lens Correction and Highlight Recovery appear where the file's camera supports them; each section resets to its defaults from its header, and the import dialog can open a RAW straight into the filter
 - Levels (with Auto), Curves, Hue/Saturation, Exposure, Gradient Map, Grain, Black & White, Color Balance and Invert
 - Gaussian Blur, with Preserve Transparency to blur only the colors and keep the layer's outline, and Motion Blur; both spread past a layer's edges
 - Progressive Blur: drag a line on the canvas and the blur follows it, from the start to the end and past it, or radial outwards from the start; Invert swaps the two ends
@@ -85,7 +85,7 @@ brew install --cask robbietilton-compositor
 - Large documents: the memory budget scales with your Mac, and a Photoshop file too big to open has its layers cropped to the canvas instead
 - Export PNG (⇧⌘E), Export JPEG (⇧⌥⌘S), and Export As (⇧⌥⌘W) for PNG, JPEG, TIFF, a one-page PDF at the print size or EXR with an HDR layer, scaled if you like, with a live preview, JPEG quality and file size; a 16-bit PNG keeps a 16-bit layer's precision, and CMYK writes a printer's inks through an ICC profile; Copy Merged
 - Keep working while a project saves
-- Photoshop-style keyboard shortcuts throughout, remappable in Edit > Keyboard Shortcuts
+- Photoshop-style keyboard shortcuts throughout, remappable in Edit > Keyboard Shortcuts: give a command a key, or clear the one it has, View › CMYK's Proof Colors and Gamut Warning included
 - Drag a number's label to scrub its value, as in Photoshop
 - Newer releases are only pointed at, never installed: a banner and the Compositor menu say a version is available, list what's new in it, and open the GitHub release to download the disk image yourself
 
