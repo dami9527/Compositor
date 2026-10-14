@@ -1651,7 +1651,7 @@
         }
       }
     },
-    "Dark": {
+    "Dark Color": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
@@ -3896,7 +3896,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "浅色"
+            "value": "光线"
           }
         }
       }
@@ -3917,6 +3917,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "浅蓝"
+          }
+        }
+      }
+    },
+    "Light Color": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "浅色"
           }
         }
       }

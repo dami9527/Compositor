@@ -252,9 +252,9 @@ struct FilterSheet: View {
         .fixedSize()
         if dither.colors == .twoColors {
             HStack(spacing: 8) {
-                Text("Dark")
+                Text("Dark Color")
                 swatch(dither.dark, help: "Choose the dark color") { session.openDitherColorPicker(light: false) }
-                Text("Light").padding(.leading, 10)
+                Text("Light Color").padding(.leading, 10)
                 swatch(dither.light, help: "Choose the light color") { session.openDitherColorPicker(light: true) }
                 Spacer()
             }
@@ -303,9 +303,9 @@ struct FilterSheet: View {
         .fixedSize()
         if lines.colors == .twoColors {
             HStack(spacing: 8) {
-                Text("Dark")
+                Text("Dark Color")
                 swatch(lines.dark, help: "Choose the screen's color") { session.openDitherColorPicker(light: false) }
-                Text("Light").padding(.leading, 10)
+                Text("Light Color").padding(.leading, 10)
                 swatch(lines.light, help: "Choose the lines' color") { session.openDitherColorPicker(light: true) }
                 Spacer()
             }
