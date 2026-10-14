@@ -741,6 +741,16 @@
         }
       }
     },
+    "Camera Raw…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Camera Raw…"
+          }
+        }
+      }
+    },
     "Cancel": {
       "localizations": {
         "zh-Hans": {
@@ -971,12 +981,12 @@
         }
       }
     },
-    "Click a shortcut, then press its new key combination. Changes apply when you save.": {
+    "Click a shortcut, then press its new key combination, or ⊗ to remove it. Changes apply when you save.": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "点击一个快捷键，再按下新的组合键。存储后才会生效。"
+            "value": "点击一个快捷键，再按下新的组合键，或点 ⊗ 移除它。存储后才会生效。"
           }
         }
       }
@@ -1122,6 +1132,16 @@
       }
     },
     "CMYK Proof": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CMYK 打样"
+          }
+        }
+      }
+    },
+    "CMYK Proof Colors": {
       "localizations": {
         "zh-Hans": {
           "stringUnit": {
@@ -3471,6 +3491,16 @@
         }
       }
     },
+    "Import, then open the Camera Raw Filter": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导入，然后打开 Camera Raw 滤镜"
+          }
+        }
+      }
+    },
     "Importing images…": {
       "localizations": {
         "zh-Hans": {
@@ -4791,6 +4821,16 @@
         }
       }
     },
+    "None": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无"
+          }
+        }
+      }
+    },
     "Normal": {
       "localizations": {
         "zh-Hans": {
@@ -5951,6 +5991,16 @@
         }
       }
     },
+    "Remove this shortcut": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移去这个快捷键"
+          }
+        }
+      }
+    },
     "Rename Layer…": {
       "localizations": {
         "zh-Hans": {
@@ -5987,6 +6037,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "复位"
+          }
+        }
+      }
+    },
+    "Reset %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "复位%@"
+          }
+        }
+      }
+    },
+    "Reset %@ to its defaults": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将%@复位为默认值"
           }
         }
       }
